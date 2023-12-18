@@ -1,3 +1,5 @@
+*.ljaz
+*.ljuy
 *.dati*
 *.frogo
 *.bulock*
