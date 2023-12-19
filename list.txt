@@ -1,3 +1,13 @@
+*.C0br4
+*.Anilorak*
+*.0nk1udlu
+*.TeaMp0ison
+*.PANIN
+*.PODSTAVLIAIPOPKU
+*.processcrypt
+*.GREEDYFATHER
+*.TURTLERANS*
+*.recovery*
 *.ljaz
 *.ljuy
 *.dati*
