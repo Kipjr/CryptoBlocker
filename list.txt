@@ -1,3 +1,5 @@
+*.loqw
+*.lomx
 *.C0br4
 *.Anilorak*
 *.0nk1udlu
