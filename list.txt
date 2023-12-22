@@ -1,3 +1,10 @@
+*.slpqne
+*.FinDom
+*.emario
+*.rhkrc
+*.lock3
+*.lock4
+*.HuiVJope
 *.loqw
 *.lomx
 *.C0br4
