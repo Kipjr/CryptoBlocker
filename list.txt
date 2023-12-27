@@ -1,3 +1,8 @@
+*_[ID-*_Mail-*@*].*
+*[ID=*-Mail=*@*].*
+*.kann
+*.cdmx
+*.cdqw
 *.slpqne
 *.FinDom
 *.emario
