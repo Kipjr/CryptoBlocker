@@ -1,3 +1,5 @@
+*.Tisak
+*.Chocolate
 *_[ID-*_Mail-*@*].*
 *[ID=*-Mail=*@*].*
 *.kann
