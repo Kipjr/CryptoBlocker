@@ -1,3 +1,10 @@
+RECOVERY NFO.txt
+*.press
+*.tutu
+*.rapid3
+*.SNet
+Importante para recuperar tus archivos.txt
+Tisak_Help.txt
 *.Tisak
 *.Chocolate
 *_[ID-*_Mail-*@*].*
