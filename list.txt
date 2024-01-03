@@ -1,3 +1,11 @@
+*.emp
+HOW-TO-DECRYPT.txt
+*.karsovrop
+FILE RECOVERY.txt
+*.cookieshelper
+*.BaN
+*.Shuriken
+READ-ME-SHURKEWIN.txt
 RECOVERY NFO.txt
 *.press
 *.tutu
