@@ -1,3 +1,15 @@
+*.lper
+*.isak
+*.CoV
+*.AeR
+*.mango
+*.pings
+*.cdpo
+*.cdtt
+*.3000usdaa
+FILE RECOVERY_ID_*.txt
+*.Dever
+*.2700
 read_for_restore_file.*
 *.xrp
 *.zeussec1337
