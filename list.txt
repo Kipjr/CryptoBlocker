@@ -1,3 +1,5 @@
+*.shiel 
+*.wessy
 *.avan
 *.pings_TMP
 *.lper
