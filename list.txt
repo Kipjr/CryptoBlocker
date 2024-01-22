@@ -1,3 +1,7 @@
+*.Frivinho*
+*.HM8
+*.backoff
+*.gotmydatafast
 *.shiel 
 *.wessy
 *.avan
