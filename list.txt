@@ -1,3 +1,5 @@
+*.Radiyu
+*.MesSecV*
 *.Frivinho*
 *.HM8
 *.backoff
