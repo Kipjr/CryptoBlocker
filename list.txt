@@ -1,3 +1,10 @@
+*.dedsec
+*.rdptest
+akira_readme.txt
+*.arika
+*.HPF
+lockxx.recovery_data.hta
+*.lockxx
 *.Radiyu
 *.MesSecV*
 *.Frivinho*
