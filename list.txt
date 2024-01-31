@@ -1,3 +1,8 @@
+*.SaherBlueEagle*
+*.*SaherBlueEagle
+*.dx31
+*.slime
+*.SILENTATTACK
 *.secles
 *.NOOSE
 *.ebaka
