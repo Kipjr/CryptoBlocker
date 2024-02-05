@@ -1,3 +1,16 @@
+*.essy
+*.kvip
+#Restore-files.txt
+*.c77L
+*.[Decrypt*@gmail.com].*
+*.ZeroGuard
+*.owonegerpro
+*.Deadline
+ENCRYPTED!!!!*
+*.mr
+info-MIRROR.txt
+*.v1vxw
+*.nvYQb
 *.SaherBlueEagle*
 *.*SaherBlueEagle
 *.dx31
