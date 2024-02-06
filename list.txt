@@ -1,3 +1,7 @@
+*.EzByZZART3XX
+*.ldhy
+*.fastbackdata
+*.new24
 *.essy
 *.kvip
 #Restore-files.txt
