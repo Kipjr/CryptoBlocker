@@ -1,3 +1,4 @@
+*.wing
 *.EzByZZART3XX
 *.ldhy
 *.fastbackdata
