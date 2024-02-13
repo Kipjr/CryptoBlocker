@@ -1,3 +1,6 @@
+*.lkhy
+*.backmydata
+*.z1n
 *.wing
 *.EzByZZART3XX
 *.ldhy
