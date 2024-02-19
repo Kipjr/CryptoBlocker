@@ -1,3 +1,7 @@
+*.goodmorning
+*.dwarf
+*.spfre
+*.2023lock
 *.lkhy
 *.backmydata
 *.z1n
