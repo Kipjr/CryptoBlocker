@@ -1,3 +1,13 @@
+encry.*
+*want_to_cry*
+*.QJI
+*.dxen
+*.lkfr
+*.water
+*.SYSDF
+*.rocklee
+*.ZENEX
+*.SWIFT
 *.goodmorning
 *.dwarf
 *.spfre
