@@ -1,3 +1,6 @@
+*.frea
+*.xa1Xx3AXs
+xa1Xx3AXs.README.txt
 *.ma1x0
 *.locked_for_LockBit
 *.locked[*@*]id*
