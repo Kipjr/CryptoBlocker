@@ -1,3 +1,7 @@
+*.wiaw
+*.wisz
+*.RSA-4096
+*.WoXoTo
 *.frea
 *.xa1Xx3AXs
 xa1Xx3AXs.README.txt
