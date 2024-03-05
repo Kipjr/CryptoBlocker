@@ -1,3 +1,8 @@
+*.Avira*
+*.payuranson
+*.zarik*
+*@zarik*.txt
+*.TMRCRYPT0R
 *.wiaw
 *.wisz
 *.RSA-4096
