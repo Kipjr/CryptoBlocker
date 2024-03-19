@@ -1,3 +1,6 @@
+*.locked*
+*.afire
+*.FORCE
 *.looy
 *.vook
 *.nacugunder
