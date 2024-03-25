@@ -1,3 +1,5 @@
+*.napoli
+*.ELITTE*
 *.cursoDFIR
 *.ert
 *.locked*
