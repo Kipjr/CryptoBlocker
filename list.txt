@@ -1,3 +1,6 @@
+*.HUNTER
+*.dzen
+*.hitobito
 *.napoli
 *.ELITTE*
 *.cursoDFIR
