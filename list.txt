@@ -1,3 +1,8 @@
+*.unkno
+*.kaaa
+*.uajs
+*.uazq
+*.schrodingercat
 *.HUNTER
 *.dzen
 *.hitobito
