@@ -1,3 +1,5 @@
+*.CrocodileSmile
+*.L00KUPRU
 *.rincrypt
 *.datah
 *.unkno
