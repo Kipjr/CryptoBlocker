@@ -1,3 +1,17 @@
+*.want_to_cry
+*.ImmaLocker
+*.Sanaloc*
+*.Poraton
+*.REDCryptoApp
+*.3R9qG8i3Z
+*.[*@waifu.club]*
+*.[[*]].wis
+*.[[*]].svh
+*.{*}.beast.zip
+*.$EBC
+*.attackfiles
+*.HWABAG
+*.XXX555
 *.CrocodileSmile
 *.L00KUPRU
 *.rincrypt
