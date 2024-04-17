@@ -1,3 +1,17 @@
+*.repair
+*.DumbStackz
+SOLUTION_NOTE.*
+*LethalLock*
+SENATOR ENCRYPTED.txt
+*.SENATOR
+*.loacked9
+*.rmallox
+*.arricklu-V-*
+*.mxdown-V-*
+*.DevicData-D-*
+*.kat6.l6st6r
+*.vollhavhelp-V-*
+*.FBIRAS
 *.want_to_cry
 *.ImmaLocker
 *.Sanaloc*
