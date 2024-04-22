@@ -1,3 +1,5 @@
+*.virus*
+*.xDec
 *.repair
 *.DumbStackz
 SOLUTION_NOTE.*
