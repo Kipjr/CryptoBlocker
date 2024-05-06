@@ -1,3 +1,15 @@
+*.qepi
+*.qehu
+*.ripa
+*.SHINRA*
+*.rincrypt*
+*.tuborg
+*.Robaj
+*.wormhole
+*.hunt*
+*.duckryptor
+*.bgjs
+*.bgzq
 *.virus*
 *.xDec
 *.repair
