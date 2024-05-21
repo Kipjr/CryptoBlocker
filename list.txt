@@ -1,3 +1,10 @@
+*.red*
+*.EDHST
+*.OPIX
+*.lilium
+*[*@*.*]-Id(*).*
+!HELP_SOS.hta
+*.veza
 *.capibara
 *.paaa
 *.vehu
