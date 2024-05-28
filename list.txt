@@ -1,3 +1,4 @@
+*.SRC
 *.red*
 *.EDHST
 *.OPIX
