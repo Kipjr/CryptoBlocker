@@ -1,3 +1,6 @@
+*.nett
+*.qcrypt
+*.ZoN
 *.SRC
 *.red*
 *.EDHST
