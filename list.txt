@@ -1,3 +1,4 @@
+*.waqa
 *.nett
 *.qcrypt
 *.ZoN
