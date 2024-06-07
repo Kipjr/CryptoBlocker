@@ -1,3 +1,17 @@
+*.orbit
+*.zawod
+*.qwertzui*
+*.watz
+*.PARKER
+*.eur
+*.mlock
+*.frlock
+*.grlock
+*.zalock
+*.Ntlock
+*.POLSAT
+*.chaddad
+*.Lexus
 *.waqa
 *.nett
 *.qcrypt
