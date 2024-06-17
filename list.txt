@@ -1,3 +1,7 @@
+*.00000001
+*.trinitylock
+*.Q1G
+*.dkq
 *.FLOCKED
 *.FOG
 *.run10
