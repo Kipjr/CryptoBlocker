@@ -1,3 +1,14 @@
+*.wikipedia
+*!!== ReadMe ==!!*
+*.XFUN
+*.i0bqzsODj
+*Stampado*
+*.cfe
+*.Smock*
+*.3ncr7pt
+*.ELPACO-TEAM
+*.lsoc
+*.S8fyxRJUX
 *.rapax
 *.cebrc
 *.AzzaSec
