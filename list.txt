@@ -1,3 +1,4 @@
+*.destroyer
 *.wikipedia
 *!!== ReadMe ==!!*
 *.XFUN
