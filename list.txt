@@ -1,3 +1,9 @@
+*.storm*
+*.dragonforce_encrypted
+*.DeathGrip
+*.sorcery
+*.2000USD
+*.senanam
 *.destroyer
 *.wikipedia
 *!!== ReadMe ==!!*
