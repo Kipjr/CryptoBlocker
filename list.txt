@@ -1,3 +1,11 @@
+*.bpant
+*.xshell
+*.cvenc
+CyberVolk_ReadMe.txt
+*.lGiKf865
+*.7rd0ioOQ9
+*.GARRAWY
+*.GARAHOWUZ
 *.storm*
 *.dragonforce_encrypted
 *.DeathGrip
