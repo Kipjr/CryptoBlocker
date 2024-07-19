@@ -1,3 +1,6 @@
+*.qual
+*.labour
+*.ursq
 *.bpant
 *.xshell
 *.cvenc
