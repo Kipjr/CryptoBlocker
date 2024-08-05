@@ -1,3 +1,4 @@
+*.vlGiKf865
 *.zurya
 *.qclztu
 *.oymtk
