@@ -1,3 +1,6 @@
+*.griffin
+*.pomoch*
+*.zola
 *.vlGiKf865
 *.zurya
 *.qclztu
