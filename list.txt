@@ -1,3 +1,6 @@
+*.allarich
+*.h0rus*
+*.attacknew*
 *.griffin
 *.pomoch*
 *.zola
