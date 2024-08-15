@@ -1,3 +1,4 @@
+*.Datablack
 *.allarich
 *.h0rus*
 *.attacknew*
