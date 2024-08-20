@@ -1,3 +1,4 @@
+ATTENTION! ALL YOUR FILES ARE ENCRYPTED.TXT
 *.Datablack
 *.allarich
 *.h0rus*
