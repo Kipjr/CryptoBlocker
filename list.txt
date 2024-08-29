@@ -1,3 +1,7 @@
+*.PURGAT0RY
+*.pwn3d
+*.raz
+*.dice
 *.insom
 ATTENTION! ALL YOUR FILES ARE ENCRYPTED.TXT
 *.Datablack
