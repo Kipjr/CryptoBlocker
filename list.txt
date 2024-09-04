@@ -1,3 +1,4 @@
+*.ownerd
 *.PURGAT0RY
 *.pwn3d
 *.raz
