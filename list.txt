@@ -1,3 +1,6 @@
+*.cunt
+*.luxy
+*.Anyv
 *.ownerd
 *.PURGAT0RY
 *.pwn3d
