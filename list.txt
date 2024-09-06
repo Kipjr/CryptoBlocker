@@ -1,3 +1,6 @@
+*.XiN*
+*.-encrypted
+*.moneyistime
 *.cunt
 *.luxy
 *.Anyv
