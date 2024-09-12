@@ -1,3 +1,5 @@
+*.blackZluk
+*.colony*
 *.XiN*
 *.-encrypted
 *.moneyistime
