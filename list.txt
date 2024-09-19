@@ -1,3 +1,15 @@
+*.escovinda
+*.ior
+*.hlas
+*.terminator
+*.RedRose
+*.3pand
+*S3P4ND*
+*.bixi
+*.OaYsksSAn
+*.mrbison
+*.pgp775
+trial-recovery.*
 *.blackZluk
 *.colony*
 *.XiN*
