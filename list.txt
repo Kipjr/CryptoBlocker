@@ -1,3 +1,6 @@
+*.tyson
+*.foxtrot*
+*.mqpoa
 *.escovinda
 *.ior
 *.hlas
