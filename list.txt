@@ -1,3 +1,5 @@
+*.prince
+*.secdojo
 *.tyson
 *.foxtrot*
 *.mqpoa
