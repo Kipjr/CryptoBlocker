@@ -1,3 +1,10 @@
+*.Ztax
+*.niko
+*.Sauron
+*.XHv8ix3OM
+*.crypticsociety
+*.dbrecover
+*.xqmln
 *.gonzofortuna
 *.*_haroldsquarepants
 *.annoy
