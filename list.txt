@@ -1,3 +1,4 @@
+*.AnonymousFrance
 *.Ztax
 *.niko
 *.Sauron
