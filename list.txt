@@ -1,3 +1,14 @@
+*.hvtovz
+*.yzho
+*.pzpq
+*.cris
+*.Shangyou
+*.Cooseagroup
+*.NJUnju
+*.FLYTECH|
+*.griffi*
+*.REVRAC
+*.FIOI
 *.AnonymousFrance
 *.Ztax
 *.niko
