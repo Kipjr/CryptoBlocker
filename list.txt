@@ -1,3 +1,5 @@
+*.hawk
+*.PLBOY
 *.hvtovz
 *.yzho
 *.pzpq
