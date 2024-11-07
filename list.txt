@@ -1,3 +1,4 @@
+*.nyxe
 *.Heda
 *.hawk
 *.PLBOY
