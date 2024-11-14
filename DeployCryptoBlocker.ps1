@@ -1,5 +1,6 @@
 # DeployCryptoBlocker.ps1
-# Version: 1.2
+# Version: 2.0
+Set-StrictMode -Version 3.0
 #####
 
 ################################ USER CONFIGURATION ################################
@@ -11,28 +12,29 @@ $fileTemplateName = "CryptoBlockerTemplate"
 # Active screening: Do not allow users to save unathorized files
 $fileTemplateType = "Active"
 # Passive screening: Allow users to save unathorized files (use for monitoring)
-#$fileTemplateType = "Passiv"
+#$fileTemplateType = "Passiv"©
 
 # Write the email options to the temporary file - comment out the entire block if no email notification should be set
-$EmailNotification = $env:TEMP + "\tmpEmail001.tmp"
-"Notification=m" >> $EmailNotification
-"To=[Admin Email]" >> $EmailNotification
+#$EmailNotification = $env:TEMP + "\tmpEmail001.tmp"
+#"Notification=m" >> $EmailNotification
+#"To=[Admin Email]" >> $EmailNotification
 ## en
-"Subject=Unauthorized file from the [Violated File Group] file group detected" >> $EmailNotification
-"Message=User [Source Io Owner] attempted to save [Source File Path] to [File Screen Path] on the [Server] server. This file is in the [Violated File Group] file group, which is not permitted on the server."  >> $EmailNotification
+#"Subject=Unauthorized file from the [Violated File Group] file group detected" >> $EmailNotification
+#"Message=User [Source Io Owner] attempted to save [Source File Path] to [File Screen Path] on the [Server] server. This file is in the [Violated File Group] file group, which is not permitted on the server."  >> $EmailNotification
 ## de
 #"Subject=Nicht autorisierte Datei erkannt, die mit Dateigruppe [Violated File Group] übereinstimmt" >> $EmailNotification
 #"Message=Das System hat erkannt, dass Benutzer [Source Io Owner] versucht hat, die Datei [Source File Path] unter [File Screen Path] auf Server [Server] zu speichern. Diese Datei weist Übereinstimmungen mit der Dateigruppe [Violated File Group] auf, die auf dem System nicht zulässig ist."  >> $EmailNotification
+$EmailNotificationAction =  New-FsrmAction  -Type Email -MailTo '[Admin Email]' -Subject 'Unauthorized file from the [Violated File Group] file group detected' -Body 'Message=User [Source Io Owner] attempted to save [Source File Path] to [File Screen Path] on the [Server] server. This file is in the [Violated File Group] file group, which is not permitted on the server.' 
 
 # Write the event log options to the temporary file - comment out the entire block if no event notification should be set
-$EventNotification = $env:TEMP + "\tmpEvent001.tmp"
-"Notification=e" >> $EventNotification
-"EventType=Warning" >> $EventNotification
+#$EventNotification = $env:TEMP + "\tmpEvent001.tmp"
+#"Notification=e" >> $EventNotification
+#"EventType=Warning" >> $EventNotification
 ## en
-"Message=User [Source Io Owner] attempted to save [Source File Path] to [File Screen Path] on the [Server] server. This file is in the [Violated File Group] file group, which is not permitted on the server." >> $EventNotification
+#"Message=User [Source Io Owner] attempted to save [Source File Path] to [File Screen Path] on the [Server] server. This file is in the [Violated File Group] file group, which is not permitted on the server." >> $EventNotification
 ## de
 #"Message=Das System hat erkannt, dass Benutzer [Source Io Owner] versucht hat, die Datei [Source File Path] unter [File Screen Path] auf Server [Server] zu speichern. Diese Datei weist Übereinstimmungen mit der Dateigruppe [Violated File Group] auf, die auf dem System nicht zulässig ist." >> $EventNotification
-
+$eventNotificationAction =  New-FsrmAction  -Type Event -RunLimitInterval 5 -EventType Error -Body "User [Source Io Owner] attempted to save [Source File Path] to [File Screen Path] on the [Server] server. This file is in the [Violated File Group] file group, which is not permitted on the server."
 # Known Extensions URL variable
 $KnownExtensionsListURL = "https://raw.githubusercontent.com/DFFspace/CryptoBlocker/master/KnownExtensions.txt"
 
@@ -266,34 +268,49 @@ Write-Host "Adding/replacing File Groups.."
 ForEach ($group in $fileGroups) {
     #Write-Host "Adding/replacing File Group [$($group.fileGroupName)] with monitored file [$($group.array -Join ",")].."
     Write-Host "`nFile Group [$($group.fileGroupName)] with monitored files from [$($group.array[0])] to [$($group.array[$group.array.GetUpperBound(0)])].."
-	&filescrn.exe filegroup Delete "/Filegroup:$($group.fileGroupName)" /Quiet
-    &filescrn.exe Filegroup Add "/Filegroup:$($group.fileGroupName)" "/Members:$($group.array -Join '|')"
+	#&filescrn.exe filegroup Delete "/Filegroup:$($group.fileGroupName)" /Quiet
+	Remove-FsrmFileGroup -Name $group.fileGroupName -Confirm:$false
+	
+    #&filescrn.exe Filegroup Add "/Filegroup:$($group.fileGroupName)" "/Members:$($group.array -Join '|')"
+	New-FsrmFileGroup -Name $group.fileGroupName -IncludePattern $group.array
 }
 
 # Create File Screen Template with Notification
 Write-Host "`n####"
 Write-Host "Adding/replacing [$fileTemplateType] File Screen Template [$fileTemplateName] with eMail Notification [$EmailNotification] and Event Notification [$EventNotification].."
-&filescrn.exe Template Delete /Template:$fileTemplateName /Quiet
+$fileTemplateTypeActive=($fileTemplateType -eq 'Active')
+#&filescrn.exe Template Delete /Template:$fileTemplateName /Quiet
+Remove-FsrmFileScreenTemplate -Name $fileTemplateName -Confirm:$false -ErrorAction SilentlyContinue
+
 # Build the argument list with all required fileGroups and notifications
-$screenArgs = 'Template', 'Add', "/Template:$fileTemplateName", "/Type:$fileTemplateType"
-ForEach ($group in $fileGroups) {
-    $screenArgs += "/Add-Filegroup:$($group.fileGroupName)"
+#$screenArgs = 'Template', 'Add', "/Template:$fileTemplateName", "/Type:$fileTemplateType"
+#ForEach ($group in $fileGroups) {
+    #$screenArgs += "/Add-Filegroup:$($group.fileGroupName)"
+    #$screenArgs += "/Add-Filegroup:$($group.fileGroupName)"
+#}
+
+$IncludeGroup = $filegroups.Filegroupname
+If ($EmailNotificationAction -ne "") {
+    #$screenArgs += "/Add-Notification:m,$EmailNotification"
+    [array]$notifications += $EmailNotificationAction
 }
-If ($EmailNotification -ne "") {
-    $screenArgs += "/Add-Notification:m,$EmailNotification"
+If ($EventNotificationAction -ne "") {
+    #$screenArgs += "/Add-Notification:e,$EventNotification"
+    [array]$notifications += $EventNotificationAction
+	
 }
-If ($EventNotification -ne "") {
-    $screenArgs += "/Add-Notification:e,$EventNotification"
-}
-&filescrn.exe $screenArgs
+#&filescrn.exe $screenArgs
+New-FsrmFileScreenTemplate -Verbose -Name $fileTemplateName -IncludeGroup $IncludeGroup -Active:$fileTemplateTypeActive -Notification $notifications
 
 # Create File Screens for every drive containing shares
 Write-Host "`n####"
 Write-Host "Adding/replacing File Screens.."
 $drivesContainingShares | ForEach-Object {
     Write-Host "File Screen for [$_] with Source Template [$fileTemplateName].."
-    &filescrn.exe Screen Delete "/Path:$_" /Quiet
-    &filescrn.exe Screen Add "/Path:$_" "/SourceTemplate:$fileTemplateName"
+    #&filescrn.exe Screen Delete "/Path:$_" /Quiet
+	Remove-FsrmFileScreen -Path $_ -Confirm:$false -ErrorAction SilentlyContinue
+    #&filescrn.exe Screen Add "/Path:$_" "/SourceTemplate:$fileTemplateName"
+	New-FsrmFileScreen -Path $_ -Template $fileTemplateName
 }
 
 # Add Folder Exceptions from ExcludeList.txt
@@ -308,11 +325,13 @@ If (Test-Path $PSScriptRoot\ExcludePaths.txt) {
     Get-Content $PSScriptRoot\ExcludePaths.txt | ForEach-Object {
         If (Test-Path $_) {
             # Build the argument list with all required fileGroups
-            $ExclusionArgs = 'Exception', 'Add', "/Path:$_"
-            ForEach ($group in $fileGroups) {
-                $ExclusionArgs += "/Add-Filegroup:$($group.fileGroupName)"
-            }
-            &filescrn.exe $ExclusionArgs
+            #$ExclusionArgs = 'Exception', 'Add', "/Path:$_"
+            #ForEach ($group in $fileGroups) {
+            #    $ExclusionArgs += "/Add-Filegroup:$($group.fileGroupName)"
+            #}
+			$ExcludeGroup = $filegroups.Filegroupname -join ','
+            #&filescrn.exe $ExclusionArgs
+			New-FsrmFileScreenException -Path $_ -IncludeGroup $ExcludeGroup
         }
     }
 }
